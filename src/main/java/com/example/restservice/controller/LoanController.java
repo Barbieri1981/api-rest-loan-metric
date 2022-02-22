@@ -24,6 +24,11 @@ public class LoanController {
 	@Autowired
 	private LoanService loanService;
 
+	/**
+	 * Retrieves loan searching by id
+	 * @param loanId loan id
+	 * @return the loan retrieved {@link Loan}
+	 */
 	@GetMapping(path = "loan/{loanId}", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value = "Retrieves loan by id", response = Loan.class)
 	@ApiResponses({
