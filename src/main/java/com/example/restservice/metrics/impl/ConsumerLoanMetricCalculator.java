@@ -13,11 +13,6 @@ import com.example.restservice.model.LoanMetric;
 @Qualifier("ConsumerLoanMetricCalculator")
 public class ConsumerLoanMetricCalculator implements ILoanMetricCalculator {
 
-	/**
-	 * Loan type = consumer
-	 * Monthly Rate = 0.005
-	 * Monthly Payment = (10000*0.005)/(1-(1+0.005)^-24) = 443.20
-	 */
 	@Override
 	public LoanMetric getLoanMetric(final Loan loan) {
 		log.debug("Retrieve loan metric: {}", loan);
